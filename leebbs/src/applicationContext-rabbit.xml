@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:rabbit="http://www.springframework.org/schema/rabbit"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans    
+      http://www.springframework.org/schema/beans/spring-beans.xsd   
+      http://www.springframework.org/schema/context   
+      http://www.springframework.org/schema/context/spring-context.xsd   
+      http://www.springframework.org/schema/aop   
+      http://www.springframework.org/schema/aop/spring-aop.xsd   
+      http://www.springframework.org/schema/tx   
+      http://www.springframework.org/schema/tx/spring-tx.xsd
+      http://www.springframework.org/schema/mvc  
+      http://www.springframework.org/schema/mvc/spring-mvc.xsd
+      http://www.springframework.org/schema/rabbit
+	  http://www.springframework.org/schema/rabbit/spring-rabbit-1.4.xsd">
+
+	<rabbit:connection-factory id="connectionFactory"
+		host="192.168.1.121" port="5672" virtual-host="qgsvhost"
+		channel-cache-size="25" username="qgs" password="qwerqwer" />
+
+	<rabbit:admin connection-factory="connectionFactory" />
+	
+	<!-- queue="q_task_apt" routing-key="q_task_apt" -->
+	<rabbit:template id="rabbitTemplate" connection-factory="connectionFactory"
+		exchange="qgswaf"/>
+
+	<rabbit:queue name="q_task_apt"   
+		durable="true"  
+        exclusive="false"  
+        auto-delete="false"/>
+
+	<rabbit:queue name="q_task_ddos"   
+		durable="true"  
+        exclusive="false"  
+        auto-delete="false"/>
+        
+	<rabbit:direct-exchange name="qgswaf" durable="true">
+		<rabbit:bindings>
+			<rabbit:binding queue="q_task_apt" key="q_task_apt" />
+			<rabbit:binding queue="q_task_ddos" key="q_task_ddos" />
+		</rabbit:bindings>
+	</rabbit:direct-exchange>
+
+
+</beans>
