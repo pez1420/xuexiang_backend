@@ -1,0 +1,9 @@
+/*		int b=12;
+		int c;
+		for (int i=2;i>=-2;i--){
+			c=b/i;
+			System.out.println("i="+i);
+		}*/
+		
+		
+		http://www.cnblogs.com/zhanghaoh/archive/2012/12/24/2830765.html
