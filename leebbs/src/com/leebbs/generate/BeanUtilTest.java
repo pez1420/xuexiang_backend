@@ -4,6 +4,9 @@
 package com.leebbs.generate;
 
 import com.leebbs.admin.entity.Country;
+import com.leebbs.admin.entity.Course;
+import com.leebbs.admin.entity.Major;
+import com.leebbs.admin.entity.University;
 
 
 
@@ -12,7 +15,10 @@ public class BeanUtilTest {
 	public static void main(String[] args) throws Exception{
 		BeanUtilTest beanUtilTest = new BeanUtilTest();
 		BeanUtils beanUtils = new BeanUtils();
-		beanUtilTest.beanTool(beanUtils, Country.class);
+		//beanUtilTest.beanTool(beanUtils, Country.class);
+		beanUtilTest.beanTool(beanUtils, University.class);
+		beanUtilTest.beanTool(beanUtils, Major.class);
+		beanUtilTest.beanTool(beanUtils, Course.class);
 	}
 	
 	/**
@@ -24,7 +30,6 @@ public class BeanUtilTest {
 	@SuppressWarnings("unchecked")
 	public void beanTool(BeanUtils beanUtils ,Class c)throws Exception{
 		beanUtils.createBeanDao(c);
-		//beanUtils.createBeanDaoImpl(c);
 		beanUtils.createBeanService(c);
 		beanUtils.createBeanServiceImpl(c);
 	}

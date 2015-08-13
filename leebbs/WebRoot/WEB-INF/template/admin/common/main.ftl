@@ -121,18 +121,13 @@
                 </li>
 
                 <li class="menu-list" id="left-menu6"  style="display: none">
-                    <a href="#"><i class="fa fa-map-marker"></i> <span>统计分析</span></a>
+                    <a href="#"><i class="fa fa-map-marker"></i> <span>基础内容</span></a>
                     <ul class="sub-menu-list">
-                        <li><a href="system_set/log/log_view1.html" target="iframe"> <i class="fa fa-book"></i>来客分析</a></li>
-                        <li><a href="system_set/log/log_view1.html" target="iframe"> <i class="fa fa-book"></i>图形分析</a></li>
-                        <li><a href="system_set/log/log_view1.html" target="iframe"> <i class="fa fa-book"></i>来客分析</a></li>
-                        <li><a href="system_set/log/log_view1.html" target="iframe"> <i class="fa fa-book"></i>图形分析</a></li>
-                        <li><a href="system_set/log/log_view1.html" target="iframe"> <i class="fa fa-book"></i>来客分析</a></li>
-                        <li><a href="system_set/log/log_view1.html" target="iframe"> <i class="fa fa-book"></i>图形分析</a></li>
-                        <li><a href="system_set/log/log_view1.html" target="iframe"> <i class="fa fa-book"></i>来客分析</a></li>
-                        <li><a href="system_set/log/log_view1.html" target="iframe"> <i class="fa fa-book"></i>图形分析</a></li>
-                        <li><a href="system_set/log/log_view1.html" target="iframe"> <i class="fa fa-book"></i>来客分析</a></li>
-                        <li><a href="system_set/log/log_view1.html" target="iframe"> <i class="fa fa-book"></i>图形分析</a></li>
+                        <li><a href="basis/country/country_view.html" target="iframe"> 国家管理</a></li>
+                        <li><a href="basis/university/university_view.html" target="iframe"> 学校管理</a></li>
+                        <li><a href="basis/subject/subject_view.html" target="iframe"> 科目管理</a></li>
+                        <li><a href="basis/major/major_view.html" target="iframe"> 专业管理</a></li>
+                        <li><a href="basis/course/course_view.html" target="iframe"> 课程管理</a></li>
                     </ul>
                 </li>
 
@@ -303,7 +298,7 @@
                     <li>
                         <a href="#left-menu6" class="btn btn-default dropdown-toggle ">
                             <i class="fa fa-bell-o"></i>
-                            <span class="">导师</span>
+                            <span class="">基础</span>
                         </a>
                     </li>
                     <li>

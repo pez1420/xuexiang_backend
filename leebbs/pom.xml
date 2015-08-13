@@ -366,18 +366,17 @@
 		    <scope>compile</scope>
 		</dependency>  
 		
-		
-	    <dependency>
+<!--  	    <dependency>
 	  		<groupId>com.rabbitmq</groupId>
 	  		<artifactId>amqp-client</artifactId>
 	  		<version>3.5.4</version>
 		</dependency>
 
-		<dependency>
+ 		<dependency>
 		    <groupId>org.springframework.amqp</groupId>
 		    <artifactId>spring-rabbit</artifactId>
 		    <version>1.4.4.RELEASE</version>
-		</dependency>
+		</dependency>   -->
 
 	</dependencies>
 	<build>

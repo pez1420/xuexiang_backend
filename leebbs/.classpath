@@ -17,7 +17,7 @@
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="D:/Workspaces/xuexiang/leebbs/WebRoot/WEB-INF/lib/jaxen-1.1.1.jar"/>
-	<classpathentry kind="lib" path="D:/Workspaces/xuexiang/leebbs/WebRoot/WEB-INF/lib/jcaptcha-1.0.jar"/>
+	<classpathentry kind="lib" path="D:/User/git/xuexiang_backend/leebbs/WebRoot/WEB-INF/lib/jaxen-1.1.1.jar"/>
+	<classpathentry kind="lib" path="D:/User/git/xuexiang_backend/leebbs/WebRoot/WEB-INF/lib/jcaptcha-1.0.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

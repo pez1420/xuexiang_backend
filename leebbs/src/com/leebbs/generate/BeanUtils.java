@@ -33,22 +33,24 @@ public class BeanUtils {
 	private static final String ANNOTATION_DATE = "@date ";
 	private static final String ANNOTATION = "/**"+RT_1+BLANK_1+"*"+BLANK_1+ANNOTATION_AUTHOR +RT_1+BLANK_1+"*"+BLANK_1+ANNOTATION_DATE +getDate()+RT_1+BLANK_1+"*/"+RT_1;
 	
+	private static final String BS_PATH = "com/leebbs/admin";
+	private static final String BS_URL = "com.leebbs.admin";
 	
 	//文件 地址
 	//private static final String BEAN_PATH = "com/b510/base/bean";
-	private static final String DAO_PATH = "com/leebbs/admin/dao";
+	private static final String DAO_PATH = BS_PATH+"/dao";
 	//private static final String DAO_IMPL_PATH = "com/b510/base/dao/impl";
-	private static final String SERVICE_PATH = "com/leebbs/admin/service";
-	private static final String SERVICE_IMPL_PATH = "com/leebbs/admin/service/impl";
-	private static final String CONTROLLER_PATH = "com/leebbs/admin/controller";
+	private static final String SERVICE_PATH = BS_PATH+"/service";
+	private static final String SERVICE_IMPL_PATH = BS_PATH+"/service/impl";
+	private static final String CONTROLLER_PATH = BS_PATH+"/controller";
 	
 	
 	//包名
-	private static final String BEAN_URL = "com.leebbs.admin.entity";
-	private static final String DAO_URL = "com.leebbs.admin.dao";
-	//private static final String DAO_IMPL_URL = "com.leebbs.admin.impl";
-	private static final String SERVICE_URL = "com.leebbs.admin.service";
-	private static final String SERVICE_IMPL_URL = "com.leebbs.admin.service.impl";
+	private static final String BEAN_URL = BS_URL+".entity";
+	private static final String DAO_URL = BS_URL+".dao";
+	//private static final String DAO_IMPL_URL = BS_URL+".impl";
+	private static final String SERVICE_URL = BS_URL+".service";
+	private static final String SERVICE_IMPL_URL = BS_URL+".service.impl";
 
 	//基本类名称
 	private static final String BASE_DAO_NAME = "com.leebbs.core.dao.BaseDao";
