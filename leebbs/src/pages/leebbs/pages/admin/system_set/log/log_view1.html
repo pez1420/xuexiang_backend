@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="ThemeBucket">
+    <link rel="shortcut icon" href="#" type="image/png">
+
+    <title>管理员管理</title>
+
+    <link href="../../../../resources/css/admin/style.css" rel="stylesheet">
+    <link href="../../../../resources/css/admin/style-responsive.css" rel="stylesheet">
+    <link href="../../../../uilib/sco-master/css/scojs.css" rel="stylesheet">
+    <link href="../../../../uilib/sco-master/css/sco.message.css" rel="stylesheet">
+    <style>
+        .chart_content {
+            width: 100%;
+            height: 300px;
+            border-radius: 4px;
+        }
+    </style>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="../../../../resources/html5shiv.js"></script>
+    <script src="../../../../resources/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<div class="frame-content">
+    <!--.container-fluid 类用于 100% 宽度，占据全部视口（viewport）的容器-->
+    <div class="container-fluid">
+        <!-- 页面导航栏 -->
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li><a href="../../system_overview/overview.html"><i class="fa fa-home"></i> 首页</a></li>
+                    <li>管理员列表(共<span id="pageTotal">200</span>条记录)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-md-6 ">
+                <div class="panel panel-default chart_panel">
+                    <div class="panel-body">
+                        <div id="chart1" class="chart_content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 ">
+                <div class="panel panel-default chart_panel">
+                    <div class="panel-body">
+                        <div id="chart2" class="chart_content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row clearfix">
+            <div class="col-md-6 ">
+                <div class="panel panel-default chart_panel">
+                    <div class="panel-body">
+                        <div id="chart3" class="chart_content"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 ">
+                <div class="panel panel-default chart_panel">
+                    <div class="panel-body">
+                        <div id="chart4" class="chart_content"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Placed js at the end of the document so the pages load faster -->
+<script src="../../../../resources/jquery-2.1.0.min.js"></script>
+<script src="../../../../resources/jquery-ui-1.9.2.custom.min.js"></script>
+<script src="../../../../resources/jquery-migrate-1.2.1.min.js"></script>
+<script src="../../../../uilib/bootstrap-3/js/bootstrap.min.js"></script>
+<script src="../../../../resources/modernizr.min.js"></script>
+
+</body>
+</html>

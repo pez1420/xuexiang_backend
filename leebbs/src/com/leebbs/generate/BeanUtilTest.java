@@ -16,7 +16,7 @@ public class BeanUtilTest {
 	public static void main(String[] args) throws Exception{
 		BeanUtilTest beanUtilTest = new BeanUtilTest();
 		BeanUtils beanUtils = new BeanUtils();
-		beanUtilTest.beanTool(beanUtils, Country.class);
+		//beanUtilTest.beanTool(beanUtils, Go.class);
 		//beanUtilTest.beanTool(beanUtils, University.class);
 		//beanUtilTest.beanTool(beanUtils, Major.class);
 		//beanUtilTest.beanTool(beanUtils, Course.class);
