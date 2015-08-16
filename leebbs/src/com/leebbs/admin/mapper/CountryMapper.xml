@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leebbs.admin.dao.CountryDao">
+
+	<sql id="Table_Name">
+		country
+	</sql>
+
+	<sql id="Db_Time">
+		now()
+	</sql>
+
+	<sql id="UUID">
+		select replace(uuid(),'-','')
+	</sql>
+
+	<sql id="Base_Column_List">
+		id, create_date, modify_date, name
+	</sql>
+
+	<resultMap id="CountryMap" type="Country">
+		<id column="id" jdbcType="VARCHAR" property="id" />
+		<result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+		<result column="modify_date" jdbcType="TIMESTAMP" property="modifyDate" />
+		<result column="name" jdbcType="VARCHAR" property="name" />
+	</resultMap>
+
+	<insert id="save" parameterType="Country">
+		<selectKey keyProperty="id" resultType="String" order="BEFORE">
+			<include refid="UUID" />
+		</selectKey>
+		insert into <include refid="Table_Name" /> (
+			id,
+			create_date,
+			modify_date, name) values
+		(#{id,jdbcType=VARCHAR},
+		<include refid="Db_Time" />
+		,
+		<include refid="Db_Time" />
+		,
+		#{name,jdbcType=VARCHAR})
+	</insert>
+
+	<update id="update" parameterType="Country">
+		update country
+		set
+		modify_date =
+		<include refid="Db_Time" />
+		,
+		name = #{name,jdbcType=VARCHAR}
+		where id = #{id,jdbcType=VARCHAR}
+	</update>
+	<!-- 根据主键返回Admin记录 -->
+	<select id="find" resultMap="CountryMap" parameterType="java.lang.String">
+		select
+		A.id as id,
+		A.create_date as create_date,
+		A.modify_date as
+		modify_date,
+		A.name as name
+		from
+		<include refid="Table_Name" />
+		A
+		where A.id = #{id,jdbcType=VARCHAR}
+	</select>
+
+	<select id="count" resultType="long">
+		select count(*)
+		from
+		<include refid="Table_Name" />
+	</select>
+
+	<delete id="remove" parameterType="java.lang.String">
+		delete from
+		<include refid="Table_Name" />
+		where id = #{id,jdbcType=VARCHAR}
+	</delete>
+
+	<select id="findPage" resultMap="CountryMap" parameterType="map">
+		select
+			*
+		from
+		<include refid="Table_Name" />
+		<trim prefix="where" prefixOverrides="and|or">
+			<!-- 非空ognl有相应方法 -->
+			<if test="search.name != null and search.name != ''">
+				name like "%"#{search.name}"%"
+			</if>
+		</trim>
+		order by name asc
+	</select>
+	
+</mapper>

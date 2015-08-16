@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.leebbs.admin.dao.MemberDao">
+
+	<sql id="Base_Column_List">
+		id, create_date, modify_date, birth, email, gender, name, username,
+		password, is_enabled,
+		is_locked, locked_date, login_date, login_failure_count, login_ip, mobile,
+		phone,
+		user_icon, register_ip, introduction, university_id, major_id
+	</sql>
+
+	<resultMap id="MemberMap" type="Member">
+		<id column="id" jdbcType="VARCHAR" property="id" />
+		<result column="create_date" jdbcType="TIMESTAMP" property="createDate"
+			javaType="java.util.Date" />
+		<result column="modify_date" jdbcType="TIMESTAMP" property="modifyDate"
+			javaType="java.util.Date" />
+		<result column="birth" jdbcType="DATE" property="birth"
+			javaType="java.util.Date" />
+		<result column="email" jdbcType="VARCHAR" property="email" />
+		<result column="gender" jdbcType="INTEGER" property="gender" />
+		<result column="name" jdbcType="VARCHAR" property="name" />
+		<result column="username" jdbcType="VARCHAR" property="username" />
+		<result column="password" jdbcType="VARCHAR" property="password" />
+		<result column="is_enabled" jdbcType="BIT" property="isEnabled" />
+		<result column="is_locked" jdbcType="BIT" property="isLocked" />
+		<result column="locked_date" jdbcType="TIMESTAMP" property="lockedDate" />
+		<result column="login_date" jdbcType="TIMESTAMP" property="loginDate" />
+		<result column="login_failure_count" jdbcType="INTEGER"
+			property="loginFailureCount" />
+		<result column="login_ip" jdbcType="VARCHAR" property="loginIp" />
+		<result column="mobile" jdbcType="VARCHAR" property="mobile" />
+		<result column="phone" jdbcType="VARCHAR" property="phone" />
+		<result column="user_icon" jdbcType="VARCHAR" property="userIcon" />
+		<result column="register_ip" jdbcType="VARCHAR" property="registerIp" />
+		<result column="introduction" jdbcType="VARCHAR" property="introduction" />
+		<result column="university_id" jdbcType="VARCHAR" property="universityId" />
+		<result column="major_id" jdbcType="VARCHAR" property="majorId" />
+	</resultMap>
+
+
+
+
+</mapper>

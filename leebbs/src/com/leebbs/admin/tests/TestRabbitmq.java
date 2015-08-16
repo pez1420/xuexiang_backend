@@ -1,5 +1,9 @@
 package com.leebbs.admin.tests;
 
+public class TestRabbitmq {
+	
+}
+/*
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -37,3 +41,5 @@ public class TestRabbitmq {
 	        
 	}
 }
+
+*/

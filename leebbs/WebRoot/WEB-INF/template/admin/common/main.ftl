@@ -123,11 +123,11 @@
                 <li class="menu-list" id="left-menu6"  style="display: none">
                     <a href="#"><i class="fa fa-map-marker"></i> <span>基础内容</span></a>
                     <ul class="sub-menu-list">
-                        <li><a href="basis/country/country_view.html" target="iframe"> 国家管理</a></li>
-                        <li><a href="basis/university/university_view.html" target="iframe"> 学校管理</a></li>
-                        <li><a href="basis/subject/subject_view.html" target="iframe"> 科目管理</a></li>
-                        <li><a href="basis/major/major_view.html" target="iframe"> 专业管理</a></li>
-                        <li><a href="basis/course/course_view.html" target="iframe"> 课程管理</a></li>
+                        <li><a href="../country/list.jhtml" target="iframe"> 国家管理</a></li>
+                        <li><a href="basis/university/university_view.jhtml" target="iframe"> 学校管理</a></li>
+                        <li><a href="basis/subject/subject_view.jhtml" target="iframe"> 科目管理</a></li>
+                        <li><a href="basis/major/major_view.jhtml" target="iframe"> 专业管理</a></li>
+                        <li><a href="basis/course/course_view.jhtml" target="iframe"> 课程管理</a></li>
                     </ul>
                 </li>
 

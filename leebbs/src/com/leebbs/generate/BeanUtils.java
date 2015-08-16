@@ -48,6 +48,7 @@ public class BeanUtils {
 	//包名
 	private static final String BEAN_URL = BS_URL+".entity";
 	private static final String DAO_URL = BS_URL+".dao";
+	private static final String CONTROLLER_URL = BS_URL+".controller";
 	//private static final String DAO_IMPL_URL = BS_URL+".impl";
 	private static final String SERVICE_URL = BS_URL+".service";
 	private static final String SERVICE_IMPL_URL = BS_URL+".service.impl";
@@ -84,10 +85,9 @@ public class BeanUtils {
 		}
 		
 		FileWriter fw = new FileWriter(f);
-		fw.write("package "+DAO_URL+";"+RT_2 + "import "+BASE_DAO_NAME+";"
-				+RT_1+"import "+BEAN_URL+"."+getLastChar(cName)+";"
-				+RT_2+ANNOTATION+"public interface " + getLastChar(cName) 
-				+ "Dao extends BaseDao <" + getLastChar(cName) + ", String> {"+RT_2+"}");
+		fw.write("package "+CONTROLLER_URL+";"+RT_2 
+				+ANNOTATION+"public class " + getLastChar(cName) 
+				+ "Controller extends BaseAdminController " + "{"+RT_2+"}");
 		fw.flush();
 		fw.close();
 		showInfo(fileName);

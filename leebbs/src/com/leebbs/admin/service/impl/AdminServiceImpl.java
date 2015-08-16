@@ -171,12 +171,12 @@ public class AdminServiceImpl extends BaseServiceImpl<Admin, String> implements
 		return null;
 	}
 
-	@Override
+	@Transactional(readOnly = true)
 	public Admin findByUsername(String username) {
 		return this.adminDao.findByUsername(username);
 	}
 
-	@Override
+	@Transactional(readOnly = true)
 	public Admin findAdminRoles(String id) {
 		// TODO Auto-generated method stub
 		return this.adminDao.findAdminRoles(id);

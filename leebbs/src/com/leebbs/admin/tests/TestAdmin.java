@@ -34,7 +34,7 @@ public class TestAdmin {
 		 }
 	 }	
 
-	@Test
+	
 	 public void save() {
 		 
 		 Admin admin = new Admin();
@@ -104,5 +104,12 @@ public class TestAdmin {
 		 admin.getRoles().add(role1);
 		 
 		 adminService.updateWithRole(admin);
+	 }
+	 
+	 @Test
+	 public void find() {
+		 String username = "lyb";
+		 Admin admin = this.adminService.findByUsername(username);
+		 System.out.println(admin.getUsername());
 	 }
 }

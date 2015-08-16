@@ -20,7 +20,10 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
          <typeAlias alias="AdminRoleLink" type="com.leebbs.admin.entity.AdminRoleLink"/>
          <typeAlias alias="Log"      type="com.leebbs.admin.entity.Log"/>
          <typeAlias alias="Pageable" type="com.leebbs.core.utils.Pageable"/>
-         
+         <typeAlias alias="Member"      type="com.leebbs.admin.entity.Member"/>
+         <typeAlias alias="Country"      type="com.leebbs.admin.entity.Country"/>
+         <typeAlias alias="Major"      type="com.leebbs.admin.entity.Major"/>
+         <typeAlias alias="University"      type="com.leebbs.admin.entity.University"/>
     </typeAliases>
 
 	<!-- 分页插件 -->
